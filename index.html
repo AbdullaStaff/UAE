@@ -3,267 +3,302 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CyberQuiz Portal - 40Q Edition</title>
+  <title>55th Eid Al Etihad | UAE National Day - 2 December 2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0b0f19;
-      --card: #131a2a;
-      --accent: #00f5d4;
-      --accent-hover: #00c4a7;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --danger: #ff4d6d;
-      --success: #00e676;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    }
-
     body {
-      background: radial-gradient(circle at top, #162238, var(--bg));
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FAF8F5;
+      color: #1A1A1A;
+      scroll-behavior: smooth;
     }
-
-    .container {
-      background: var(--card);
-      border: 1px solid rgba(0, 245, 212, 0.25);
-      box-shadow: 0 0 30px rgba(0, 245, 212, 0.12);
-      border-radius: 16px;
-      width: 100%;
-      max-width: 600px;
-      padding: 32px;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      text-align: center;
-      margin-bottom: 8px;
-      color: var(--accent);
-      letter-spacing: 1px;
-    }
-
-    p.subtitle {
-      text-align: center;
-      color: var(--muted);
-      margin-bottom: 24px;
-      font-size: 0.95rem;
-    }
-
-    .input-group {
-      margin-bottom: 16px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    input {
-      width: 100%;
-      padding: 12px 14px;
-      border-radius: 8px;
-      border: 1px solid #2a3652;
-      background: #0d1320;
-      color: var(--text);
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    input:focus {
-      border-color: var(--accent);
-    }
-
-    button.btn {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background: var(--accent);
-      color: #061018;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.1s;
-      margin-top: 8px;
-    }
-
-    button.btn:hover {
-      background: var(--accent-hover);
-    }
-
-    button.btn:active {
-      transform: scale(0.99);
-    }
-
-    .error-msg {
-      color: var(--danger);
-      font-size: 0.9rem;
-      margin-top: 10px;
-      text-align: center;
-      min-height: 20px;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .quiz-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #24304a;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .badge {
-      background: rgba(0, 245, 212, 0.15);
-      color: var(--accent);
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-
-    .question-text {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      line-height: 1.4;
-    }
-
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .option-btn {
-      text-align: left;
-      padding: 12px 16px;
-      border-radius: 10px;
-      border: 1px solid #2a3652;
-      background: #0d1320;
-      color: var(--text);
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .option-btn:hover:not(:disabled) {
-      border-color: var(--accent);
-      background: #141f35;
-    }
-
-    .option-btn.correct {
-      border-color: var(--success);
-      background: rgba(0, 230, 118, 0.15);
-      color: var(--success);
-    }
-
-    .option-btn.wrong {
-      border-color: var(--danger);
-      background: rgba(255, 77, 109, 0.15);
-      color: var(--danger);
-    }
-
-    .score-box {
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    .score-number {
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin: 12px 0;
+    .font-arabic { font-family: 'Amiri', serif; }
+    .uae-gradient {
+      background: linear-gradient(135deg, #00732F 0%, #000000 50%, #CE1126 100%);
     }
   </style>
 </head>
 <body>
 
-  <!-- LOGIN SCREEN -->
-  <div class="container" id="login-screen">
-    <h1>ADMIN PORTAL</h1>
-    <p class="subtitle">Sign in to access the 40-Question Challenge</p>
-    <form id="login-form">
-      <div class="input-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter username" required />
-      </div>
-      <div class="input-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter password" required />
-      </div>
-      <button type="submit" class="btn">Login</button>
-      <div class="error-msg" id="login-error"></div>
-    </form>
+  <!-- Top UAE Flag Ribbon -->
+  <div class="h-2 w-full flex">
+    <div class="w-1/4 bg-[#CE1126]"></div>
+    <div class="w-1/4 bg-[#00732F]"></div>
+    <div class="w-1/4 bg-white"></div>
+    <div class="w-1/4 bg-black"></div>
   </div>
 
-  <!-- QUIZ SCREEN -->
-  <div class="container hidden" id="quiz-screen">
-    <div class="quiz-header">
-      <span class="badge">User: qua</span>
-      <span id="progress-text">Question 1 of 40</span>
-      <span id="score-text">Score: 0</span>
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-3">
+        <span class="bg-[#00732F] text-white font-extrabold text-sm px-2.5 py-1 rounded-lg">55</span>
+        <div>
+          <span class="font-extrabold text-lg tracking-tight block leading-none">55th EID AL ETIHAD</span>
+          <span class="text-xs text-stone-500 font-semibold">2 DECEMBER 2026 • UAE</span>
+        </div>
+      </a>
+      <div class="hidden md:flex gap-8 text-sm font-semibold text-stone-700">
+        <a href="#culture" class="hover:text-[#00732F] transition">Culture & Heritage</a>
+        <a href="#history" class="hover:text-[#00732F] transition">55 Years of Union</a>
+        <a href="#emirates" class="hover:text-[#00732F] transition">The 7 Emirates</a>
+        <a href="#greeting" class="hover:text-[#CE1126] transition">55th Greeting Card</a>
+      </div>
     </div>
-    <div class="question-text" id="question-text"></div>
-    <div class="options" id="options-container"></div>
-    <button class="btn hidden" id="next-btn">Next Question</button>
-  </div>
+  </nav>
 
-  <!-- RESULT SCREEN -->
-  <div class="container hidden" id="result-screen">
-    <h1>QUIZ COMPLETE</h1>
-    <div class="score-box">
-      <p class="subtitle">Final Score</p>
-      <div class="score-number" id="final-score">0 / 40</div>
-      <p class="subtitle" id="result-message"></p>
+  <!-- Hero Section -->
+  <header class="relative uae-gradient text-white py-20 px-4 overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-white/15 border border-white/25 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#F3D06B] mb-5">
+        <span>🇦🇪 1971 – 2026</span>
+        <span>•</span>
+        <span>55th Anniversary • Belonging in Unity</span>
+      </div>
+
+      <p class="font-arabic text-4xl md:text-6xl text-[#F3D06B] mb-3">عيد الاتحاد الـ ٥٥</p>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+        Celebrating 55 Years of the United Arab Emirates
+      </h1>
+      <p class="text-lg md:text-xl text-stone-200 max-w-2xl mx-auto mb-10">
+        Marking <strong>55 proud years</strong> since the historic union on <strong>2 December 1971</strong>—celebrating family, shared Emirati traditions, and our united future.
+      </p>
+
+      <!-- Countdown Timer to 2 December 2026 -->
+      <div class="inline-block bg-black/45 backdrop-blur-md border border-white/20 rounded-2xl p-6 mb-8">
+        <p class="text-xs uppercase tracking-widest text-[#F3D06B] font-bold mb-3">Countdown to 55th Eid Al Etihad • 2 Dec 2026</p>
+        <div class="grid grid-cols-4 gap-4 md:gap-8 text-center">
+          <div>
+            <span id="days" class="text-3xl md:text-5xl font-extrabold block">00</span>
+            <span class="text-xs text-stone-300 uppercase">Days</span>
+          </div>
+          <div>
+            <span id="hours" class="text-3xl md:text-5xl font-extrabold block">00</span>
+            <span class="text-xs text-stone-300 uppercase">Hours</span>
+          </div>
+          <div>
+            <span id="minutes" class="text-3xl md:text-5xl font-extrabold block">00</span>
+            <span class="text-xs text-stone-300 uppercase">Minutes</span>
+          </div>
+          <div>
+            <span id="seconds" class="text-3xl md:text-5xl font-extrabold block">00</span>
+            <span class="text-xs text-stone-300 uppercase">Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <a href="#culture" class="inline-block bg-white text-black font-bold px-8 py-3.5 rounded-full hover:bg-[#F3D06B] transition">
+          Explore Emirati Culture
+        </a>
+      </div>
     </div>
-    <button class="btn" id="restart-btn">Play Again</button>
-  </div>
+  </header>
+
+  <!-- Culture & Traditions Section -->
+  <section id="culture" class="py-20 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <span class="text-xs font-bold uppercase tracking-widest text-[#00732F]">Belonging in Unity • Living Traditions</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Pillars of Emirati Culture</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
+        <div class="text-4xl mb-4">☕</div>
+        <h3 class="text-xl font-bold mb-2">Al Majlis & Hospitality</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Generosity (<em>Al Karam</em>) and family gatherings define Emirati life. Guests are welcomed in the Majlis with aromatic <strong>Gahwa</strong> (Arabic coffee with cardamom and saffron) and dates.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
+        <div class="text-4xl mb-4">🦅</div>
+        <h3 class="text-xl font-bold mb-2">Falconry & Desert Heritage</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          A UNESCO-recognized heritage passed down through generations, symbolizing courage, patience, and deep respect for the Arabian desert.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
+        <div class="text-4xl mb-4">🥁</div>
+        <h3 class="text-xl font-bold mb-2">Al Ayala Traditional Dance</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Performed at Eid Al Etihad celebrations across all seven emirates, rows of performers move in harmony with bamboo canes to traditional drums and chanted poetry.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
+        <div class="text-4xl mb-4">⛵</div>
+        <h3 class="text-xl font-bold mb-2">Pearl Diving & Maritime Roots</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Wooden <strong>Dhow</strong> boats and pearl diving shaped coastal communities, building resilience, teamwork, and brotherhood long before 1971.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
+        <div class="text-4xl mb-4">🧵</div>
+        <h3 class="text-xl font-bold mb-2">Al Sadu Weaving & Attire</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Traditional <em>Al Sadu</em> weaving showcases geometric desert patterns, while citizens celebrate National Day in the crisp white <strong>Kandura</strong> and embroidered <strong>Mukhawar</strong>.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
+        <div class="text-4xl mb-4">🍯</div>
+        <h3 class="text-xl font-bold mb-2">Emirati Cuisine</h3>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Families gather over traditional dishes including <strong>Machboos</strong>, <strong>Harees</strong>, <strong>Thareed</strong>, and golden <strong>Luqaimat</strong> topped with date syrup and sesame.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 55-Year History Section -->
+  <section id="history" class="bg-stone-900 text-white py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#F3D06B]">1971 – 2026</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold mt-2">55 Years of the Union</h2>
+      </div>
+
+      <div class="space-y-8 border-l-2 border-[#C59B27] pl-6 ml-4">
+        <div>
+          <span class="text-sm font-bold text-[#F3D06B]">18 February 1968</span>
+          <h3 class="text-xl font-bold">The Historic Meeting at Al Samha</h3>
+          <p class="text-stone-300 text-sm mt-1">Sheikh Zayed bin Sultan Al Nahyan and Sheikh Rashid bin Saeed Al Maktoum met to lay the foundation for a unified federation.</p>
+        </div>
+        <div>
+          <span class="text-sm font-bold text-[#F3D06B]">2 December 1971</span>
+          <h3 class="text-xl font-bold">Birth of the United Arab Emirates</h3>
+          <p class="text-stone-300 text-sm mt-1">At Union House in Dubai, the Rulers signed the declaration establishing the UAE and raised the national flag for the first time.</p>
+        </div>
+        <div>
+          <span class="text-sm font-bold text-[#F3D06B]">10 February 1972</span>
+          <h3 class="text-xl font-bold">Ras Al Khaimah Joins the Union</h3>
+          <p class="text-stone-300 text-sm mt-1">Ras Al Khaimah officially joined the federation, completing the seven emirates united under one flag.</p>
+        </div>
+        <div>
+          <span class="text-sm font-bold text-[#F3D06B]">2 December 2026</span>
+          <h3 class="text-xl font-bold">55th Eid Al Etihad — Belonging in Unity</h3>
+          <p class="text-stone-300 text-sm mt-1">Celebrating 55 years of unity, progress, and shared heritage across every home and family in the Emirates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 7 Emirates -->
+  <section id="emirates" class="py-20 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold uppercase tracking-widest text-[#CE1126]">Seven Emirates, One Family</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-2">The 7 Emirates at 55</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="p-6 bg-white rounded-xl border border-stone-200">
+        <h3 class="font-extrabold text-lg">Abu Dhabi</h3>
+        <p class="text-xs text-stone-500 mt-1">The Capital • Al Ain Oasis & Sheikh Zayed Grand Mosque</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-stone-200">
+        <h3 class="font-extrabold text-lg">Dubai</h3>
+        <p class="text-xs text-stone-500 mt-1">Global Innovation Hub & Union House</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-stone-200">
+        <h3 class="font-extrabold text-lg">Sharjah</h3>
+        <p class="text-xs text-stone-500 mt-1">Cultural Capital of the Arab World</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-stone-200">
+        <h3 class="font-extrabold text-lg">Ajman</h3>
+        <p class="text-xs text-stone-500 mt-1">Coastal Charm & Historic Dhow Building</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-stone-200">
+        <h3 class="font-extrabold text-lg">Umm Al Quwain</h3>
+        <p class="text-xs text-stone-500 mt-1">Mangroves, Islands & Ancient Archaeology</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-stone-200">
+        <h3 class="font-extrabold text-lg">Ras Al Khaimah</h3>
+        <p class="text-xs text-stone-500 mt-1">Jebel Jais Peaks & Rich Pearl History</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl border border-stone-200">
+        <h3 class="font-extrabold text-lg">Fujairah</h3>
+        <p class="text-xs text-stone-500 mt-1">Hajar Mountains & Gulf of Oman Coast</p>
+      </div>
+      <div class="p-6 bg-[#00732F] text-white rounded-xl flex flex-col justify-center">
+        <h3 class="font-extrabold text-lg">Eid Al Etihad 55</h3>
+        <p class="text-xs text-emerald-100 mt-1">1971 – 2026 🇦🇪</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Greeting Card Generator -->
+  <section id="greeting" class="py-16 px-4 bg-stone-100 border-t border-stone-200">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold mb-3">Create Your 55th Eid Al Etihad Card</h2>
+      <p class="text-stone-600 text-sm mb-6">Enter your name below to personalize your 55th UAE National Day greeting.</p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
+        <input id="nameInput" type="text" placeholder="Enter your name..." class="px-4 py-3 rounded-xl border border-stone-300 w-full sm:w-72 focus:outline-none focus:border-[#00732F]" />
+        <button onclick="updateCard()" class="bg-[#00732F] text-white font-bold px-6 py-3 rounded-xl hover:bg-emerald-800 transition">
+          Update Card
+        </button>
+      </div>
+
+      <!-- Greeting Card Preview -->
+      <div class="uae-gradient text-white p-8 md:p-12 rounded-3xl shadow-xl max-w-xl mx-auto border-4 border-[#C59B27]">
+        <span class="inline-block bg-black/30 text-[#F3D06B] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+          55th Eid Al Etihad • 2 December 2026
+        </span>
+        <p class="font-arabic text-3xl text-[#F3D06B] mb-2">كل عام والإمارات بخير</p>
+        <h3 class="text-2xl md:text-3xl font-extrabold mb-3">Happy 55th UAE National Day!</h3>
+        <p class="text-stone-200 text-sm mb-6">
+          Celebrating 55 years of unity, pride, and prosperity across the United Arab Emirates.
+        </p>
+        <div class="inline-block bg-white/15 px-5 py-2 rounded-full text-sm font-semibold">
+          Sent with pride by <span id="cardSender" class="text-[#F3D06B] font-bold">Your Name</span> 🇦🇪
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-stone-400 py-8 text-center text-sm">
+    <p class="text-white font-bold mb-1">United Arab Emirates • 55th Eid Al Etihad (2 December 2026)</p>
+    <p>Belonging in Unity • Hosted on GitHub Pages</p>
+  </footer>
 
   <script>
-    // ALL 40 QUESTIONS ARE STORED HERE
-    const questions = [
-      { q: "1. What does HTML stand for?", options: ["HyperText Markup Language", "HighText Machine Language", "Hyperlink Text Management", "Home Tool Markup Language"], answer: 0 },
-      { q: "2. Which planet is known as the Red Planet?", options: ["Venus", "Mars", "Jupiter", "Saturn"], answer: 1 },
-      { q: "3. What is the chemical symbol for Gold?", options: ["Go", "Gd", "Au", "Ag"], answer: 2 },
-      { q: "4. Which language is primarily used for styling web pages?", options: ["Python", "C++", "CSS", "SQL"], answer: 2 },
-      { q: "5. What is 12 × 8?", options: ["84", "96", "108", "92"], answer: 1 },
-      { q: "6. Who developed the theory of relativity?", options: ["Isaac Newton", "Nikola Tesla", "Albert Einstein", "Galileo Galilei"], answer: 2 },
-      { q: "7. What does CPU stand for?", options: ["Central Processing Unit", "Computer Personal Unit", "Central Power Utility", "Core Processing Unit"], answer: 0 },
-      { q: "8. Which ocean is the largest on Earth?", options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"], answer: 3 },
-      { q: "9. What is the boiling point of water at sea level?", options: ["90°C", "100°C", "110°C", "120°C"], answer: 1 },
-      { q: "10. Which data structure uses LIFO (Last In, First Out)?", options: ["Queue", "Array", "Stack", "Linked List"], answer: 2 },
-      { q: "11. What is the capital city of Japan?", options: ["Seoul", "Beijing", "Tokyo", "Kyoto"], answer: 2 },
-      { q: "12. How many bits are in one byte?", options: ["4", "8", "16", "32"], answer: 1 },
-      { q: "13. Which gas do plants absorb from the atmosphere?", options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], answer: 2 },
-      { q: "14. What is the square root of 144?", options: ["10", "11", "12", "14"], answer: 2 },
-      { q: "15. Which protocol is used for secure web browsing?", options: ["HTTP", "FTP", "HTTPS", "SMTP"], answer: 2 },
-      { q: "16. What is the hardest natural substance on Earth?", options: ["Iron", "Diamond", "Quartz", "Titanium"], answer: 1 },
-      { q: "17. In JavaScript, which keyword declares a constant?", options: ["var", "let", "const", "static"], answer: 2 },
-      { q: "18. How many continents are there on Earth?", options: ["5", "6", "7", "8"], answer: 2 },
-      { q: "19. What does RAM stand for?", options: ["Random Access Memory", "Read Access Module", "Rapid Action Memory", "Run All Memory"], answer: 0 },
-      { q: "20. Which element has the atomic number 1?", options: ["Helium", "Oxygen", "Hydrogen", "Carbon"], answer: 2 },
-      { q: "21. What is the fastest land animal?", options: ["Lion", "Cheetah", "Pronghorn", "Falcon"], answer: 1 },
-      { q: "22. Which planet is closest to the Sun?", options: ["Venus", "Earth", "Mercury", "Mars"], answer: 2 },
-      { q: "23. What does GPU stand for?", options: ["General Processing Unit", "Graphics Processing Unit", "Global Power Unit", "Graphical Performance Utility"], answer: 1 },
-      { q: "24. What is the chemical formula for water?", options: ["CO2", "H2O", "O2", "NaCl"], answer: 1 },
-      { q: "25. Which country is home to the Great Barrier Reef?", options: ["Brazil", "South Africa", "Australia", "Indonesia"], answer: 2 },
-      { q: "26. What is 15% of 200?", options: ["20", "25", "30", "35"], answer: 2 },
-      { q: "27.
+    // Countdown to 2 December 2026 (UAE Standard Time UTC+4)
+    function updateCountdown() {
+      const target = new Date("2026-12-02T00:00:00+04:00").getTime();
+      const now = new Date().getTime();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.getElementById("days").innerText = "55";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+        return;
+      }
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / 1000 / 60) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("days").innerText = String(d).padStart(2, '0');
+      document.getElementById("hours").innerText = String(h).padStart(2, '0');
+      document.getElementById("minutes").innerText = String(m).padStart(2, '0');
+      document.getElementById("seconds").innerText = String(s).padStart(2, '0');
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Greeting Card Updater
+    function updateCard() {
+      const val = document.getElementById("nameInput").value.trim();
+      document.getElementById("cardSender").innerText = val || "Your Name";
+    }
+  </script>
+</body>
+</html>
