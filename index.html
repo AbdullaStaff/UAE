@@ -1,273 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>55th Eid Al Etihad | UAE National Day - 2 December 2026</title>
+  <title>عيد الاتحاد الـ ٥٥ | دولة الإمارات العربية المتحدة - ٢ ديسمبر ٢٠٢٦</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #FAF8F5;
-      color: #1A1A1A;
+      font-family: 'Cairo', sans-serif;
+      background-color: #FAF7F2;
+      color: #18181B;
       scroll-behavior: smooth;
     }
-    .font-arabic { font-family: 'Amiri', serif; }
-    .uae-gradient {
-      background: linear-gradient(135deg, #00732F 0%, #000000 50%, #CE1126 100%);
+    .font-amiri { font-family: 'Amiri', serif; }
+
+    /* خلفية فاخرة بألوان العلم مع نقش هندسي إماراتي */
+    .hero-bg {
+      background: radial-gradient(circle at 20% 20%, rgba(0, 115, 47, 0.92), rgba(12, 12, 12, 0.96) 55%, rgba(206, 17, 38, 0.9) 100%);
+      position: relative;
+    }
+    .sadu-pattern {
+      background-image: radial-gradient(#C59B27 1px, transparent 1px), radial-gradient(#C59B27 1px, transparent 1px);
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
+      opacity: 0.08;
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #F6E27A 0%, #C59B27 50%, #9E7817 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border {
+      border: 1px solid rgba(197, 155, 39, 0.4);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
     }
   </style>
 </head>
-<body>
+<body class="antialiased">
 
-  <!-- Top UAE Flag Ribbon -->
-  <div class="h-2 w-full flex">
+  <!-- شريط ألوان علم الإمارات العلوي -->
+  <div class="h-2.5 w-full flex shadow-sm">
     <div class="w-1/4 bg-[#CE1126]"></div>
     <div class="w-1/4 bg-[#00732F]"></div>
     <div class="w-1/4 bg-white"></div>
     <div class="w-1/4 bg-black"></div>
   </div>
 
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+  <!-- القائمة العلوية -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-stone-200/80 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
       <a href="#" class="flex items-center gap-3">
-        <span class="bg-[#00732F] text-white font-extrabold text-sm px-2.5 py-1 rounded-lg">55</span>
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#00732F] via-black to-[#CE1126] flex items-center justify-center text-[#F6E27A] font-black text-xl shadow-md border border-[#C59B27]">
+          ٥٥
+        </div>
         <div>
-          <span class="font-extrabold text-lg tracking-tight block leading-none">55th EID AL ETIHAD</span>
-          <span class="text-xs text-stone-500 font-semibold">2 DECEMBER 2026 • UAE</span>
+          <span class="font-extrabold text-lg text-stone-900 block leading-tight">عيد الاتحاد الـ ٥٥</span>
+          <span class="text-xs text-[#00732F] font-bold">٢ ديسمبر ٢٠٢٦ • الإمارات</span>
         </div>
       </a>
-      <div class="hidden md:flex gap-8 text-sm font-semibold text-stone-700">
-        <a href="#culture" class="hover:text-[#00732F] transition">Culture & Heritage</a>
-        <a href="#history" class="hover:text-[#00732F] transition">55 Years of Union</a>
-        <a href="#emirates" class="hover:text-[#00732F] transition">The 7 Emirates</a>
-        <a href="#greeting" class="hover:text-[#CE1126] transition">55th Greeting Card</a>
+
+      <div class="hidden md:flex gap-8 text-sm font-bold text-stone-700">
+        <a href="#culture" class="hover:text-[#00732F] transition">التراث والثقافة</a>
+        <a href="#history" class="hover:text-[#00732F] transition">مسيرة ٥٥ عاماً</a>
+        <a href="#emirates" class="hover:text-[#00732F] transition">الإمارات السبع</a>
+        <a href="#greeting" class="bg-[#00732F] text-white px-4 py-2 rounded-full hover:bg-emerald-800 transition shadow-sm">صمّم بطاقة تهنئة</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="relative uae-gradient text-white py-20 px-4 overflow-hidden">
+  <!-- الواجهة الرئيسية (Hero) -->
+  <header class="hero-bg text-white py-24 px-4 overflow-hidden">
+    <div class="absolute inset-0 sadu-pattern pointer-events-none"></div>
+
     <div class="max-w-5xl mx-auto text-center relative z-10">
-      <div class="inline-flex items-center gap-2 bg-white/15 border border-white/25 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#F3D06B] mb-5">
-        <span>🇦🇪 1971 – 2026</span>
+      <!-- شارة الذكرى 55 -->
+      <div class="inline-flex items-center gap-2 glass-card px-5 py-2 rounded-full text-xs md:text-sm font-bold text-[#F6E27A] mb-6 shadow-lg">
+        <span>🇦🇪 ١٩٧١ – ٢٠٢٦</span>
         <span>•</span>
-        <span>55th Anniversary • Belonging in Unity</span>
+        <span>الذكرى الخامسة والخمسون لقيام الاتحاد</span>
       </div>
 
-      <p class="font-arabic text-4xl md:text-6xl text-[#F3D06B] mb-3">عيد الاتحاد الـ ٥٥</p>
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-        Celebrating 55 Years of the United Arab Emirates
+      <h2 class="font-amiri text-3xl md:text-5xl text-[#F6E27A] mb-3 font-bold">
+        عزّكم عزّنا.. ووطننا واحد
+      </h2>
+      <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-6 leading-tight">
+        عيد الاتحاد <span class="gold-gradient">الـ ٥٥</span>
       </h1>
-      <p class="text-lg md:text-xl text-stone-200 max-w-2xl mx-auto mb-10">
-        Marking <strong>55 proud years</strong> since the historic union on <strong>2 December 1971</strong>—celebrating family, shared Emirati traditions, and our united future.
+      <p class="text-base md:text-xl text-stone-200 max-w-2xl mx-auto mb-10 leading-relaxed">
+        نحتفي بمرور <strong>٥٥ عاماً</strong> من الفخر والوحدة والإنجاز منذ الثاني من ديسمبر ١٩٧١، مستلهمين إرث الآباء المؤسسين وتراثنا الإماراتي الأصيل.
       </p>
 
-      <!-- Countdown Timer to 2 December 2026 -->
-      <div class="inline-block bg-black/45 backdrop-blur-md border border-white/20 rounded-2xl p-6 mb-8">
-        <p class="text-xs uppercase tracking-widest text-[#F3D06B] font-bold mb-3">Countdown to 55th Eid Al Etihad • 2 Dec 2026</p>
-        <div class="grid grid-cols-4 gap-4 md:gap-8 text-center">
-          <div>
-            <span id="days" class="text-3xl md:text-5xl font-extrabold block">00</span>
-            <span class="text-xs text-stone-300 uppercase">Days</span>
+      <!-- العداد التنازلي ليوم 2 ديسمبر 2026 -->
+      <div class="glass-card rounded-3xl p-6 md:p-8 max-w-2xl mx-auto mb-10 shadow-2xl">
+        <p class="text-xs md:text-sm font-bold text-[#F6E27A] mb-4 tracking-wide">
+          العدّ التنازلي ليوم ٢ ديسمبر ٢٠٢٦ (توقيت الإمارات)
+        </p>
+        <div class="grid grid-cols-4 gap-3 md:gap-6 text-center" dir="ltr">
+          <div class="bg-black/40 rounded-2xl p-3 md:p-4 border border-white/10">
+            <span id="days" class="text-3xl md:text-5xl font-black text-white block">00</span>
+            <span class="text-xs text-stone-300 font-bold mt-1 block">يوم</span>
           </div>
-          <div>
-            <span id="hours" class="text-3xl md:text-5xl font-extrabold block">00</span>
-            <span class="text-xs text-stone-300 uppercase">Hours</span>
+          <div class="bg-black/40 rounded-2xl p-3 md:p-4 border border-white/10">
+            <span id="hours" class="text-3xl md:text-5xl font-black text-white block">00</span>
+            <span class="text-xs text-stone-300 font-bold mt-1 block">ساعة</span>
           </div>
-          <div>
-            <span id="minutes" class="text-3xl md:text-5xl font-extrabold block">00</span>
-            <span class="text-xs text-stone-300 uppercase">Minutes</span>
+          <div class="bg-black/40 rounded-2xl p-3 md:p-4 border border-white/10">
+            <span id="minutes" class="text-3xl md:text-5xl font-black text-white block">00</span>
+            <span class="text-xs text-stone-300 font-bold mt-1 block">دقيقة</span>
           </div>
-          <div>
-            <span id="seconds" class="text-3xl md:text-5xl font-extrabold block">00</span>
-            <span class="text-xs text-stone-300 uppercase">Seconds</span>
+          <div class="bg-black/40 rounded-2xl p-3 md:p-4 border border-white/10">
+            <span id="seconds" class="text-3xl md:text-5xl font-black text-[#F6E27A] block">00</span>
+            <span class="text-xs text-stone-300 font-bold mt-1 block">ثانية</span>
           </div>
         </div>
       </div>
 
-      <div>
-        <a href="#culture" class="inline-block bg-white text-black font-bold px-8 py-3.5 rounded-full hover:bg-[#F3D06B] transition">
-          Explore Emirati Culture
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#culture" class="bg-gradient-to-l from-[#C59B27] to-[#E5C158] text-black font-extrabold px-8 py-4 rounded-full hover:scale-105 transition shadow-lg">
+          استكشف الثقافة الإماراتية
+        </a>
+        <a href="#greeting" class="glass-card text-white font-bold px-8 py-4 rounded-full hover:bg-white/20 transition">
+          أرسل تهنئتك للوطن 🇦🇪
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Culture & Traditions Section -->
-  <section id="culture" class="py-20 px-4 max-w-6xl mx-auto">
-    <div class="text-center mb-14">
-      <span class="text-xs font-bold uppercase tracking-widest text-[#00732F]">Belonging in Unity • Living Traditions</span>
-      <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Pillars of Emirati Culture</h2>
+  <!-- قسم الثقافة والتراث الإماراتي -->
+  <section id="culture" class="py-24 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="inline-block bg-[#00732F]/10 text-[#00732F] text-xs font-extrabold px-4 py-1.5 rounded-full mb-3">
+        أصالة وهوية متجذّرة
+      </span>
+      <h2 class="text-3xl md:text-5xl font-black text-stone-900">ركائز الثقافة والتراث الإماراتي</h2>
+      <p class="text-stone-600 mt-3 max-w-xl mx-auto text-sm md:text-base">
+        عادات وتقاليد تناقلتها الأجيال لتشكل روح المجتمع الإماراتي في عيد الاتحاد الخامس والخمسين.
+      </p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
-        <div class="text-4xl mb-4">☕</div>
-        <h3 class="text-xl font-bold mb-2">Al Majlis & Hospitality</h3>
+      <!-- بطاقة 1 -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-stone-200/80 hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition">☕</div>
+        <h3 class="text-xl font-extrabold mb-3 text-stone-900">المجلس والقهوة الإماراتية</h3>
         <p class="text-stone-600 text-sm leading-relaxed">
-          Generosity (<em>Al Karam</em>) and family gatherings define Emirati life. Guests are welcomed in the Majlis with aromatic <strong>Gahwa</strong> (Arabic coffee with cardamom and saffron) and dates.
+          الكرم وحسن الضيافة عنوان البيت الإماراتي؛ حيث يُستقبل الضيوف في <strong>المجلس</strong> برائحة <strong>القهوة العربية</strong> بالهيل والزعفران مع التمر الفاخر.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
-        <div class="text-4xl mb-4">🦅</div>
-        <h3 class="text-xl font-bold mb-2">Falconry & Desert Heritage</h3>
+      <!-- بطاقة 2 -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-stone-200/80 hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition">🦅</div>
+        <h3 class="text-xl font-extrabold mb-3 text-stone-900">الصقارة وتراث الصحراء</h3>
         <p class="text-stone-600 text-sm leading-relaxed">
-          A UNESCO-recognized heritage passed down through generations, symbolizing courage, patience, and deep respect for the Arabian desert.
+          تُعدّ الصقارة رمزاً للشجاعة والصبر والاعتزاز بالهوية البدوية، وقد أُدرجت ضمن قائمة التراث الثقافي غير المادي في اليونسكو.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
-        <div class="text-4xl mb-4">🥁</div>
-        <h3 class="text-xl font-bold mb-2">Al Ayala Traditional Dance</h3>
+      <!-- بطاقة 3 -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-stone-200/80 hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition">🥁</div>
+        <h3 class="text-xl font-extrabold mb-3 text-stone-900">فن العيّالة الشعبي</h3>
         <p class="text-stone-600 text-sm leading-relaxed">
-          Performed at Eid Al Etihad celebrations across all seven emirates, rows of performers move in harmony with bamboo canes to traditional drums and chanted poetry.
+          لوحة فنية تراثية تتصدّر احتفالات عيد الاتحاد، يصطف فيها الرجال حاملين العصي على إيقاع الطبول والأهازيج الوطنية التي تجسد التلاحم.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
-        <div class="text-4xl mb-4">⛵</div>
-        <h3 class="text-xl font-bold mb-2">Pearl Diving & Maritime Roots</h3>
+      <!-- بطاقة 4 -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-stone-200/80 hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition">⛵</div>
+        <h3 class="text-xl font-extrabold mb-3 text-stone-900">الغوص على اللؤلؤ والبحر</h3>
         <p class="text-stone-600 text-sm leading-relaxed">
-          Wooden <strong>Dhow</strong> boats and pearl diving shaped coastal communities, building resilience, teamwork, and brotherhood long before 1971.
+          ارتبط أهل الساحل بالبحر وصناعة السفن الخشبية التقليدية (<strong>المحامل</strong>) ورحلات الغوص بحثاً عن اللؤلؤ بروح التعاون والتكاتف.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
-        <div class="text-4xl mb-4">🧵</div>
-        <h3 class="text-xl font-bold mb-2">Al Sadu Weaving & Attire</h3>
+      <!-- بطاقة 5 -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-stone-200/80 hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition">🧵</div>
+        <h3 class="text-xl font-extrabold mb-3 text-stone-900">حرفة السدو والزي الوطني</h3>
         <p class="text-stone-600 text-sm leading-relaxed">
-          Traditional <em>Al Sadu</em> weaving showcases geometric desert patterns, while citizens celebrate National Day in the crisp white <strong>Kandura</strong> and embroidered <strong>Mukhawar</strong>.
+          تُجسّد نقوش <strong>السدو</strong> جمال البيئة الصحراوية، بينما يتزين الإماراتيون في عيد الاتحاد بـ <strong>الكندورة</strong> البيضاء و<strong>المخوّر</strong> الإماراتي الأصيل.
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 hover:shadow-md transition">
-        <div class="text-4xl mb-4">🍯</div>
-        <h3 class="text-xl font-bold mb-2">Emirati Cuisine</h3>
+      <!-- بطاقة 6 -->
+      <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-stone-200/80 hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-yellow-50 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition">🍯</div>
+        <h3 class="text-xl font-extrabold mb-3 text-stone-900">المطبخ الإماراتي الأصيل</h3>
         <p class="text-stone-600 text-sm leading-relaxed">
-          Families gather over traditional dishes including <strong>Machboos</strong>, <strong>Harees</strong>, <strong>Thareed</strong>, and golden <strong>Luqaimat</strong> topped with date syrup and sesame.
+          تجمع المائدة الإماراتية العائلة حول أطباق <strong>الهريس</strong> و<strong>المجبوس</strong> و<strong>الثريد</strong>، وتُختتم بحلوى <strong>اللقيمات</strong> الذهبية بالدبس والسمسم.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- 55-Year History Section -->
-  <section id="history" class="bg-stone-900 text-white py-20 px-4">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-14">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#F3D06B]">1971 – 2026</span>
-        <h2 class="text-3xl md:text-4xl font-extrabold mt-2">55 Years of the Union</h2>
+  <!-- مسيرة 55 عاماً -->
+  <section id="history" class="bg-stone-950 text-white py-24 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 sadu-pattern pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <span class="text-xs font-extrabold text-[#F6E27A] tracking-widest">١٩٧١ – ٢٠٢٦</span>
+        <h2 class="text-3xl md:text-5xl font-black mt-2">محطات خالدة في مسيرة الاتحاد</h2>
       </div>
 
-      <div class="space-y-8 border-l-2 border-[#C59B27] pl-6 ml-4">
-        <div>
-          <span class="text-sm font-bold text-[#F3D06B]">18 February 1968</span>
-          <h3 class="text-xl font-bold">The Historic Meeting at Al Samha</h3>
-          <p class="text-stone-300 text-sm mt-1">Sheikh Zayed bin Sultan Al Nahyan and Sheikh Rashid bin Saeed Al Maktoum met to lay the foundation for a unified federation.</p>
+      <div class="space-y-10 border-r-2 border-[#C59B27] pr-8 mr-2">
+        <div class="relative">
+          <span class="absolute -right-[41px] top-1 w-4 h-4 rounded-full bg-[#C59B27] ring-4 ring-stone-950"></span>
+          <span class="text-sm font-bold text-[#F6E27A]">١٨ فبراير ١٩٦٨</span>
+          <h3 class="text-xl font-extrabold mt-1">لقاء السميح التاريخي</h3>
+          <p class="text-stone-300 text-sm mt-2 leading-relaxed">
+            اجتماع المغفور لهما الشيخ زايد بن سلطان آل نهيان والشيخ راشد بن سعيد آل مكتوم، الذي وضع اللبنة الأولى لقيام اتحاد الإمارات.
+          </p>
         </div>
-        <div>
-          <span class="text-sm font-bold text-[#F3D06B]">2 December 1971</span>
-          <h3 class="text-xl font-bold">Birth of the United Arab Emirates</h3>
-          <p class="text-stone-300 text-sm mt-1">At Union House in Dubai, the Rulers signed the declaration establishing the UAE and raised the national flag for the first time.</p>
+
+        <div class="relative">
+          <span class="absolute -right-[41px] top-1 w-4 h-4 rounded-full bg-[#00732F] ring-4 ring-stone-950"></span>
+          <span class="text-sm font-bold text-[#F6E27A]">٢ ديسمبر ١٩٧١</span>
+          <h3 class="text-xl font-extrabold mt-1">إعلان قيام دولة الإمارات العربية المتحدة</h3>
+          <p class="text-stone-300 text-sm mt-2 leading-relaxed">
+            في دار الاتحاد بدبي، وقّع الآباء المؤسسون وثيقة الاتحاد وارتفع علم الدولة شامخاً للمرة الأولى بقيادة الشيخ زايد بن سلطان آل نهيان، طيّب الله ثراه.
+          </p>
         </div>
-        <div>
-          <span class="text-sm font-bold text-[#F3D06B]">10 February 1972</span>
-          <h3 class="text-xl font-bold">Ras Al Khaimah Joins the Union</h3>
-          <p class="text-stone-300 text-sm mt-1">Ras Al Khaimah officially joined the federation, completing the seven emirates united under one flag.</p>
+
+        <div class="relative">
+          <span class="absolute -right-[41px] top-1 w-4 h-4 rounded-full bg-white ring-4 ring-stone-950"></span>
+          <span class="text-sm font-bold text-[#F6E27A]">١٠ فبراير ١٩٧٢</span>
+          <h3 class="text-xl font-extrabold mt-1">انضمام رأس الخيمة واكتمال العقد</h3>
+          <p class="text-stone-300 text-sm mt-2 leading-relaxed">
+            انضمت إمارة رأس الخيمة رسمياً إلى الاتحاد لتكتمل منظومة الإمارات السبع تحت راية واحدة وقلب واحد.
+          </p>
         </div>
-        <div>
-          <span class="text-sm font-bold text-[#F3D06B]">2 December 2026</span>
-          <h3 class="text-xl font-bold">55th Eid Al Etihad — Belonging in Unity</h3>
-          <p class="text-stone-300 text-sm mt-1">Celebrating 55 years of unity, progress, and shared heritage across every home and family in the Emirates.</p>
+
+        <div class="relative">
+          <span class="absolute -right-[41px] top-1 w-4 h-4 rounded-full bg-[#CE1126] ring-4 ring-stone-950"></span>
+          <span class="text-sm font-bold text-[#F6E27A]">٢ ديسمبر ٢٠٢٦</span>
+          <h3 class="text-xl font-extrabold mt-1">عيد الاتحاد الـ ٥٥ — مسيرة لا تتوقف</h3>
+          <p class="text-stone-300 text-sm mt-2 leading-relaxed">
+            نحتفي بـ ٥٥ عاماً من الريادة العالمية والازدهار والتلاحم المجتمعي نحو مستقبل أكثر إشراقاً.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- The 7 Emirates -->
-  <section id="emirates" class="py-20 px-4 max-w-6xl mx-auto">
-    <div class="text-center mb-12">
-      <span class="text-xs font-bold uppercase tracking-widest text-[#CE1126]">Seven Emirates, One Family</span>
-      <h2 class="text-3xl md:text-4xl font-extrabold mt-2">The 7 Emirates at 55</h2>
+  <!-- الإمارات السبع -->
+  <section id="emirates" class="py-24 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <span class="inline-block bg-[#CE1126]/10 text-[#CE1126] text-xs font-extrabold px-4 py-1.5 rounded-full mb-3">
+        سبع إمارات.. بيت متوحد
+      </span>
+      <h2 class="text-3xl md:text-5xl font-black text-stone-900">الإمارات السبع في عامها الـ ٥٥</h2>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div class="p-6 bg-white rounded-xl border border-stone-200">
-        <h3 class="font-extrabold text-lg">Abu Dhabi</h3>
-        <p class="text-xs text-stone-500 mt-1">The Capital • Al Ain Oasis & Sheikh Zayed Grand Mosque</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
+      <div class="p-6 bg-white rounded-3xl border border-stone-200 shadow-sm hover:border-[#00732F] transition">
+        <h3 class="font-black text-xl text-stone-900">أبوظبي</h3>
+        <p class="text-xs text-stone-500 mt-2 leading-relaxed">العاصمة • واحة العين وجامع الشيخ زايد الكبير</p>
       </div>
-      <div class="p-6 bg-white rounded-xl border border-stone-200">
-        <h3 class="font-extrabold text-lg">Dubai</h3>
-        <p class="text-xs text-stone-500 mt-1">Global Innovation Hub & Union House</p>
+      <div class="p-6 bg-white rounded-3xl border border-stone-200 shadow-sm hover:border-[#00732F] transition">
+        <h3 class="font-black text-xl text-stone-900">دبي</h3>
+        <p class="text-xs text-stone-500 mt-2 leading-relaxed">دار الاتحاد ورمز الابتكار والريادة العالمية</p>
       </div>
-      <div class="p-6 bg-white rounded-xl border border-stone-200">
-        <h3 class="font-extrabold text-lg">Sharjah</h3>
-        <p class="text-xs text-stone-500 mt-1">Cultural Capital of the Arab World</p>
+      <div class="p-6 bg-white rounded-3xl border border-stone-200 shadow-sm hover:border-[#00732F] transition">
+        <h3 class="font-black text-xl text-stone-900">الشارقة</h3>
+        <p class="text-xs text-stone-500 mt-2 leading-relaxed">عاصمة الثقافة العربية وقلب التراث والفنون</p>
       </div>
-      <div class="p-6 bg-white rounded-xl border border-stone-200">
-        <h3 class="font-extrabold text-lg">Ajman</h3>
-        <p class="text-xs text-stone-500 mt-1">Coastal Charm & Historic Dhow Building</p>
+      <div class="p-6 bg-white rounded-3xl border border-stone-200 shadow-sm hover:border-[#00732F] transition">
+        <h3 class="font-black text-xl text-stone-900">عجمان</h3>
+        <p class="text-xs text-stone-500 mt-2 leading-relaxed">أصالة الساحل وتاريخ صناعة السفن الخشبية</p>
       </div>
-      <div class="p-6 bg-white rounded-xl border border-stone-200">
-        <h3 class="font-extrabold text-lg">Umm Al Quwain</h3>
-        <p class="text-xs text-stone-500 mt-1">Mangroves, Islands & Ancient Archaeology</p>
+      <div class="p-6 bg-white rounded-3xl border border-stone-200 shadow-sm hover:border-[#00732F] transition">
+        <h3 class="font-black text-xl text-stone-900">أم القيوين</h3>
+        <p class="text-xs text-stone-500 mt-2 leading-relaxed">أشجار القرم والجزر الطبيعية والآثار العريقة</p>
       </div>
-      <div class="p-6 bg-white rounded-xl border border-stone-200">
-        <h3 class="font-extrabold text-lg">Ras Al Khaimah</h3>
-        <p class="text-xs text-stone-500 mt-1">Jebel Jais Peaks & Rich Pearl History</p>
+      <div class="p-6 bg-white rounded-3xl border border-stone-200 shadow-sm hover:border-[#00732F] transition">
+        <h3 class="font-black text-xl text-stone-900">رأس الخيمة</h3>
+        <p class="text-xs text-stone-500 mt-2 leading-relaxed">قمة جبل جيس وتاريخ اللؤلؤ والحصون</p>
       </div>
-      <div class="p-6 bg-white rounded-xl border border-stone-200">
-        <h3 class="font-extrabold text-lg">Fujairah</h3>
-        <p class="text-xs text-stone-500 mt-1">Hajar Mountains & Gulf of Oman Coast</p>
+      <div class="p-6 bg-white rounded-3xl border border-stone-200 shadow-sm hover:border-[#00732F] transition">
+        <h3 class="font-black text-xl text-stone-900">الفجيرة</h3>
+        <p class="text-xs text-stone-500 mt-2 leading-relaxed">جبال الحجر الشامخة وساحل خليج عُمان</p>
       </div>
-      <div class="p-6 bg-[#00732F] text-white rounded-xl flex flex-col justify-center">
-        <h3 class="font-extrabold text-lg">Eid Al Etihad 55</h3>
-        <p class="text-xs text-emerald-100 mt-1">1971 – 2026 🇦🇪</p>
+      <div class="p-6 bg-gradient-to-br from-[#00732F] to-emerald-900 text-white rounded-3xl flex flex-col justify-center shadow-md">
+        <h3 class="font-black text-xl text-[#F6E27A]">عيد الاتحاد ٥٥</h3>
+        <p class="text-xs text-emerald-100 mt-2 font-bold">١٩٧١ – ٢٠٢٦ 🇦🇪</p>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Greeting Card Generator -->
-  <section id="greeting" class="py-16 px-4 bg-stone-100 border-t border-stone-200">
+  <!-- مصمم بطاقة التهنئة التفاعلية -->
+  <section id="greeting" class="py-20 px-4 bg-stone-100 border-t border-stone-200">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-extrabold mb-3">Create Your 55th Eid Al Etihad Card</h2>
-      <p class="text-stone-600 text-sm mb-6">Enter your name below to personalize your 55th UAE National Day greeting.</p>
+      <span class="text-xs font-extrabold text-[#00732F]">شارك فرحة الوطن</span>
+      <h2 class="text-3xl md:text-4xl font-black mt-1 mb-3">صمّم بطاقة تهنئة عيد الاتحاد الـ ٥٥</h2>
+      <p class="text-stone-600 text-sm mb-8">اكتب اسمك أو اسم عائلتك لتظهر على بطاقة التهنئة الفاخرة، ثم انسخ نص التهنئة لمشاركته.</p>
 
-      <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-        <input id="nameInput" type="text" placeholder="Enter your name..." class="px-4 py-3 rounded-xl border border-stone-300 w-full sm:w-72 focus:outline-none focus:border-[#00732F]" />
-        <button onclick="updateCard()" class="bg-[#00732F] text-white font-bold px-6 py-3 rounded-xl hover:bg-emerald-800 transition">
-          Update Card
+      <div class="flex flex-col sm:flex-row gap-3 justify-center mb-10">
+        <input id="nameInput" type="text" placeholder="اكتب اسمك هنا..." class="px-5 py-3.5 rounded-2xl border border-stone-300 w-full sm:w-80 text-right focus:outline-none focus:border-[#00732F] bg-white shadow-sm" />
+        <button onclick="updateCard()" class="bg-[#00732F] text-white font-extrabold px-7 py-3.5 rounded-2xl hover:bg-emerald-800 transition shadow-md">
+          تحديث البطاقة
         </button>
       </div>
 
-      <!-- Greeting Card Preview -->
-      <div class="uae-gradient text-white p-8 md:p-12 rounded-3xl shadow-xl max-w-xl mx-auto border-4 border-[#C59B27]">
-        <span class="inline-block bg-black/30 text-[#F3D06B] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
-          55th Eid Al Etihad • 2 December 2026
-        </span>
-        <p class="font-arabic text-3xl text-[#F3D06B] mb-2">كل عام والإمارات بخير</p>
-        <h3 class="text-2xl md:text-3xl font-extrabold mb-3">Happy 55th UAE National Day!</h3>
-        <p class="text-stone-200 text-sm mb-6">
-          Celebrating 55 years of unity, pride, and prosperity across the United Arab Emirates.
-        </p>
-        <div class="inline-block bg-white/15 px-5 py-2 rounded-full text-sm font-semibold">
-          Sent with pride by <span id="cardSender" class="text-[#F3D06B] font-bold">Your Name</span> 🇦🇪
+      <!-- معاينة البطاقة -->
+      <div class="hero-bg text-white p-8 md:p-12 rounded-[2rem] shadow-2xl max-w-xl mx-auto border-2 border-[#C59B27] relative overflow-hidden">
+        <div class="absolute inset-0 sadu-pattern pointer-events-none"></div>
+        <div class="relative z-10">
+          <span class="inline-block bg-black/40 text-[#F6E27A] text-xs font-bold px-4 py-1.5 rounded-full mb-4 border border-[#C59B27]/40">
+            عيد الاتحاد الـ ٥٥ • ٢ ديسمبر ٢٠٢٦
+          </span>
+          <p class="font-amiri text-3xl md:text-4xl text-[#F6E27A] mb-3 font-bold">
+            كل عام والإمارات قيادةً وشعباً بألف خير
+          </p>
+          <h3 class="text-2xl md:text-3xl font-black mb-4">دمتِ يا إمارات العزّ شامخة</h3>
+          <p class="text-stone-200 text-sm leading-relaxed mb-7">
+            بمناسبة الذكرى الـ ٥٥ لقيام اتحاد دولة الإمارات العربية المتحدة، نسأل الله أن يديم على وطننا نعمة الأمن والأمان والرخاء.
+          </p>
+          <div class="inline-block bg-white/15 backdrop-blur-md px-6 py-2.5 rounded-full text-sm font-bold border border-white/20">
+            تهنئة خاصة من: <span id="cardSender" class="text-[#F6E27A] font-black">اسمك هنا</span> 🇦🇪
+          </div>
         </div>
       </div>
+
+      <button onclick="copyGreeting()" id="copyBtn" class="mt-6 bg-stone-900 text-white text-sm font-bold px-6 py-3 rounded-full hover:bg-stone-800 transition">
+        📋 نسخ نص التهنئة للمشاركة
+      </button>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-black text-stone-400 py-8 text-center text-sm">
-    <p class="text-white font-bold mb-1">United Arab Emirates • 55th Eid Al Etihad (2 December 2026)</p>
-    <p>Belonging in Unity • Hosted on GitHub Pages</p>
+  <!-- التذييل -->
+  <footer class="bg-black text-stone-400 py-10 text-center text-sm border-t border-stone-800">
+    <p class="text-white font-extrabold text-base mb-1">دولة الإمارات العربية المتحدة • عيد الاتحاد الـ ٥٥ (٢ ديسمبر ٢٠٢٦)</p>
+    <p class="text-xs text-stone-500">صُمّم بكل فخر واعتزاز بالوطن</p>
   </footer>
 
   <script>
-    // Countdown to 2 December 2026 (UAE Standard Time UTC+4)
+    // العداد التنازلي ليوم 2 ديسمبر 2026 بتوقيت الإمارات (+04:00)
     function updateCountdown() {
       const target = new Date("2026-12-02T00:00:00+04:00").getTime();
       const now = new Date().getTime();
@@ -294,10 +368,23 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // Greeting Card Updater
+    // تحديث اسم المرسل في البطاقة
     function updateCard() {
       const val = document.getElementById("nameInput").value.trim();
-      document.getElementById("cardSender").innerText = val || "Your Name";
+      document.getElementById("cardSender").innerText = val || "اسمك هنا";
+    }
+
+    // نسخ نص التهنئة
+    function copyGreeting() {
+      const sender = document.getElementById("cardSender").innerText;
+      const text = `🇦🇪 كل عام والإمارات قيادةً وشعباً بألف خير بمناسبة عيد الاتحاد الـ ٥٥ (٢ ديسمبر ٢٠٢٦)!\nتهنئة خاصة من: ${sender}`;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById("copyBtn");
+        btn.innerText = "✅ تم نسخ التهنئة بنجاح!";
+        setTimeout(() => {
+          btn.innerText = "📋 نسخ نص التهنئة للمشاركة";
+        }, 2500);
+      });
     }
   </script>
 </body>
